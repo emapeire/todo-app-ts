@@ -17,7 +17,8 @@ module.exports = {
       'warn',
       { allowConstantExport: true }
     ],
-    'react/jsx-no-target-blank': [2, { allowReferrer: false }]
+    'react/jsx-no-target-blank': [2, { allowReferrer: false }],
+    'react/prop-types': 'off'
   },
   overrides: [
     {

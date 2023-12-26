@@ -1,3 +1,9 @@
+import { useState } from 'react'
+import { mock } from './mock'
+import Todos from './components/Todos'
+
 export default function App() {
-  return <h1>TODO + TS</h1>
+  const [todos, setTodos] = useState(mock)
+
+  return <Todos todos={todos} />
 }
