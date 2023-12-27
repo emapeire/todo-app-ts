@@ -6,8 +6,8 @@ import { TodoId } from './types'
 export default function App() {
   const [todos, setTodos] = useState(mock)
 
-  const handleRemove = (todoId: TodoId) => {
-    const newTodos = todos.filter((todo) => todo.id !== todoId.id)
+  const handleRemove = ({ id }: TodoId) => {
+    const newTodos = todos.filter((todo) => todo.id !== id)
     setTodos(newTodos)
   }
 
