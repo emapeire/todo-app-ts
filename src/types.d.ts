@@ -5,7 +5,7 @@ export interface Todo {
 }
 
 export type TodoId = Pick<Todo, 'id'>
-export type RemoveTodo = (id: TodoId) => void
+export type RemoveTodo = ({ id }: TodoId) => void
 
 export interface RemoveTodoProps {
   onRemove: RemoveTodo
