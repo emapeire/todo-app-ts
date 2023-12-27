@@ -13,8 +13,8 @@ export default function Todo({
         className='toggle'
         type='checkbox'
         checked={completed}
-        onChange={() => {
-          onCompleted({ id, completed })
+        onChange={(event) => {
+          onCompleted({ id, completed: event.target.checked })
         }}
       />
       <label>{title}</label>
