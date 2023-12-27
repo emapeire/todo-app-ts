@@ -18,6 +18,16 @@ export default function Footer({
         filterSelected={filterSelected}
         onFilterChange={onFilterChange}
       />
+
+      {completedCount > 0 && (
+        <button
+          type='button'
+          className='clear-completed'
+          onClick={onClearCompleted}
+        >
+          Clear completed
+        </button>
+      )}
     </footer>
   )
 }
