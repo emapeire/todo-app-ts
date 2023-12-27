@@ -18,7 +18,7 @@ export default function Todo({
       <button
         className='destroy'
         onClick={() => {
-          onRemove(id)
+          onRemove({ id })
         }}
       />
     </div>
