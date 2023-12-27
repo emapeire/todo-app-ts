@@ -4,7 +4,8 @@ export default function Todo({
   id,
   title,
   completed,
-  onRemove
+  onRemove,
+  onCompleted
 }: TodoFormProps) {
   return (
     <div className='view'>
@@ -12,7 +13,9 @@ export default function Todo({
         className='toggle'
         type='checkbox'
         checked={completed}
-        onChange={() => {}}
+        onChange={() => {
+          onCompleted({ id, completed })
+        }}
       />
       <label>{title}</label>
       <button

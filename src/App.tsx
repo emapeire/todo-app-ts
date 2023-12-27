@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { mock } from './mock'
 import Todos from './components/Todos'
-import { TodoId } from './types'
+import { CompletedProps, TodoId } from './types'
 
 export default function App() {
   const [todos, setTodos] = useState(mock)
@@ -11,9 +11,23 @@ export default function App() {
     setTodos(newTodos)
   }
 
+  const handleCompleted = ({ id, completed }: CompletedProps) => {
+    const newTodos = todos.map((todo) => {
+      if (todo.id === id) {
+        return { ...todo, completed }
+      }
+      return todo
+    })
+    setTodos(newTodos)
+  }
+
   return (
     <div className='todoapp'>
-      <Todos onRemove={handleRemove} todos={todos} />
+      <Todos
+        onCompleted={handleCompleted}
+        onRemove={handleRemove}
+        todos={todos}
+      />
     </div>
   )
 }
