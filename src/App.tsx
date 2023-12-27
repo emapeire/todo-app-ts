@@ -30,6 +30,11 @@ export default function App() {
     setFilterSelected(filter)
   }
 
+  const handleRemoveAllCompleted = () => {
+    const newTodos = todos.filter((todo) => !todo.completed)
+    setTodos(newTodos)
+  }
+
   const activeCount = todos.filter((todo) => !todo.completed).length
   const completedCount = todos.filter((todo) => todo.completed).length
 
@@ -49,7 +54,7 @@ export default function App() {
       <Footer
         activeCount={activeCount}
         completedCount={completedCount}
-        onClearCompleted={() => {}}
+        onClearCompleted={handleRemoveAllCompleted}
         filterSelected={filterSelected}
         onFilterChange={handleFilterChange}
       />
