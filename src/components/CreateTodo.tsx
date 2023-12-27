@@ -15,7 +15,6 @@ export default function CreateTodo({ onAddTodo }: CreateTodoProps) {
       <input
         className='new-todo'
         value={inputValue}
-        onChange={}
         placeholder='What needs to be done?'
         autoFocus={true}
       ></input>
