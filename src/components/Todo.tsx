@@ -1,6 +1,11 @@
-import { type Todo } from '../types'
+import { TodoFormProps } from '../types'
 
-export default function Todo({ id, title, completed }: Todo) {
+export default function Todo({
+  id,
+  title,
+  completed,
+  onRemove
+}: TodoFormProps) {
   return (
     <div className='view'>
       <input

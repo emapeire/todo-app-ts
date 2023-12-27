@@ -5,9 +5,14 @@ import Todos from './components/Todos'
 export default function App() {
   const [todos, setTodos] = useState(mock)
 
+  const handleRemove = (id: number) => {
+    const newTodos = todos.filter((todo) => todo.id !== id)
+    setTodos(newTodos)
+  }
+
   return (
     <div className='todoapp'>
-      <Todos todos={todos} />
+      <Todos onRemove={handleRemove} todos={todos} />
     </div>
   )
 }
