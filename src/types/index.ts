@@ -9,6 +9,9 @@ export interface Todo {
 
 // TodoId type
 export type TodoId = Pick<Todo, 'id'>
+// TodoTitle type
+export type TodoTitle = Pick<Todo, 'title'>
+
 // ToggleRemoved type
 export type ToggleRemoved = ({ id }: TodoId) => void
 
@@ -53,3 +56,11 @@ export interface FooterProps extends FiltersProps {
   completedCount: number
   onClearCompleted: () => void
 }
+
+// HeaderProps interface
+export interface HeaderProps {
+  onAddTodo: ({ title }: TodoTitle) => void
+}
+
+// CreateTodoProps type
+export type CreateTodoProps = HeaderProps
