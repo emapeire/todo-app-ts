@@ -41,8 +41,19 @@ export interface TodoProps
 // FilterValues type
 export type FilterValues = (typeof TODO_FILTERS)[keyof typeof TODO_FILTERS]
 
-// FiltersProps interface
-export interface FiltersProps {
+// FilterValuesProps interface
+export interface FilterValuesProps {
   filterSelected: FilterValues
+}
+
+// FiltersProps interface
+export interface FiltersProps extends FilterValuesProps {
   onFilterChange: (filter: FilterValues) => void
+}
+
+// FooterProps interface
+export interface FooterProps extends FilterValuesProps {
+  activeCount: number
+  completedCount: number
+  onClearCompleted: () => void
 }
