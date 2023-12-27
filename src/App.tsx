@@ -36,7 +36,7 @@ export default function App() {
     setTodos(newTodos)
   }
 
-  const handleAddTodo = (title: TodoTitle) => {
+  const handleAddTodo = ({ title }: TodoTitle) => {
     const newTodo = {
       id: crypto.randomUUID(),
       title,
