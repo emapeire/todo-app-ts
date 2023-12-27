@@ -5,7 +5,7 @@ export interface Todo {
 }
 
 export type TodoId = Pick<Todo, 'id'>
-export type ToggleRemove = ({ id }: TodoId) => void
+export type ToggleRemoved = ({ id }: TodoId) => void
 
 export type CompletedProps = Pick<Todo, 'id' | 'completed'>
 export type ToggleCompleted = ({ id, completed }: CompletedProps) => void
@@ -14,15 +14,15 @@ export interface ToggleCompletedProps {
   onCompleted: ToggleCompleted
 }
 
-export interface ToggleRemoveProps {
-  onRemove: ToggleRemove
+export interface ToggleRemovedProps {
+  onRemoved: ToggleRemoved
 }
 
-export interface TodosProps extends ToggleRemoveProps, ToggleCompletedProps {
+export interface TodosProps extends ToggleRemovedProps, ToggleCompletedProps {
   todos: Todo[]
 }
 
 export interface TodoFormProps
   extends Todo,
-    ToggleRemoveProps,
+    ToggleRemovedProps,
     ToggleCompletedProps {}

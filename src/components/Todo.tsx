@@ -4,7 +4,7 @@ export default function Todo({
   id,
   title,
   completed,
-  onRemove,
+  onRemoved,
   onCompleted
 }: TodoFormProps) {
   return (
@@ -21,7 +21,7 @@ export default function Todo({
       <button
         className='destroy'
         onClick={() => {
-          onRemove({ id })
+          onRemoved({ id })
         }}
       />
     </div>

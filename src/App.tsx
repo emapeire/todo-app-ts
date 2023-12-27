@@ -6,7 +6,7 @@ import { CompletedProps, TodoId } from './types'
 export default function App() {
   const [todos, setTodos] = useState(mock)
 
-  const handleRemove = ({ id }: TodoId) => {
+  const handleRemoved = ({ id }: TodoId) => {
     const newTodos = todos.filter((todo) => todo.id !== id)
     setTodos(newTodos)
   }
@@ -25,7 +25,7 @@ export default function App() {
     <div className='todoapp'>
       <Todos
         onCompleted={handleCompleted}
-        onRemove={handleRemove}
+        onRemoved={handleRemoved}
         todos={todos}
       />
     </div>

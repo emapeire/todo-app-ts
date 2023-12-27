@@ -1,7 +1,7 @@
 import { TodosProps } from '../types'
 import Todo from './Todo'
 
-export default function Todos({ todos, onRemove, onCompleted }: TodosProps) {
+export default function Todos({ todos, onRemoved, onCompleted }: TodosProps) {
   return (
     <ul className='todo-list'>
       {todos.map((todo) => (
@@ -11,7 +11,7 @@ export default function Todos({ todos, onRemove, onCompleted }: TodosProps) {
             id={todo.id}
             title={todo.title}
             completed={todo.completed}
-            onRemove={onRemove}
+            onRemoved={onRemoved}
             onCompleted={onCompleted}
           />
         </li>
