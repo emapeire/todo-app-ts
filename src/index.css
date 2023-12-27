@@ -1,3 +1,7 @@
 html {
   filter: invert(1);
 }
+
+.invert {
+  filter: invert(1);
+}

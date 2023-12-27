@@ -6,7 +6,11 @@ export default function Header({ onAddTodo }: HeaderProps) {
     <header className='header'>
       <h1>
         todo
-        <img style={{ width: '60px', height: 'auto' }} src='/ts.svg' />
+        <img
+          style={{ width: '60px', height: 'auto' }}
+          src='/ts.svg'
+          className='invert'
+        />
       </h1>
 
       <CreateTodo onAddTodo={onAddTodo} />
