@@ -6,10 +6,7 @@ export default function Header({ onAddTodo }: HeaderProps) {
     <header className='header'>
       <h1>
         todo
-        <img
-          style={{ width: '60px', height: 'auto' }}
-          src='https://raw.githubusercontent.com/tastejs/todomvc-app-css/master/app-icon.png'
-        />
+        <img style={{ width: '60px', height: 'auto' }} src='/ts.svg' />
       </h1>
 
       <CreateTodo onAddTodo={onAddTodo} />
