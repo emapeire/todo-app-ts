@@ -5,5 +5,9 @@ import Todos from './components/Todos'
 export default function App() {
   const [todos, setTodos] = useState(mock)
 
-  return <Todos todos={todos} />
+  return (
+    <div className='todoapp'>
+      <Todos todos={todos} />
+    </div>
+  )
 }
