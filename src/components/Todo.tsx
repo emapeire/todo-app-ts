@@ -8,7 +8,7 @@ export default function Todo({
   onCompleted
 }: TodoProps) {
   return (
-    <div className='view'>
+    <div className='view invert'>
       <input
         className='toggle'
         type='checkbox'
