@@ -15,7 +15,12 @@ export default function Todo({
         onChange={() => {}}
       />
       <label>{title}</label>
-      <button className='destroy' onClick={() => {}} />
+      <button
+        className='destroy'
+        onClick={() => {
+          onRemove(id)
+        }}
+      />
     </div>
   )
 }
